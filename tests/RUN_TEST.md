@@ -85,16 +85,16 @@ From the root directory:
 
 ## Example Test Run Output
 
-============================= test session starts =============================  
-collected 10 items
+`============================= test session starts =============================`  
+`collected 10 items`
+  
+`test_lex_flows.py ......`  
+`test_lambda_flows.py ..`  
+`test_fallback_and_handoff.py ..`  
+`test_cloudwatch_logs.py ..`  
+`test_performance.py .`  
 
-test_lex_flows.py ......  
-test_lambda_flows.py ..  
-test_fallback_and_handoff.py ..  
-test_cloudwatch_logs.py ..  
-test_performance.py .  
-
-============================== 10 passed in 5.12s ==============================
+`============================== 10 passed in 5.12s ==============================`
 
 ## Success Criteria
 All tests should pass with:
