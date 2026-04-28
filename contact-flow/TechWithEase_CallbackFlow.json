@@ -1,0 +1,381 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "5670a3bf-6c1b-4426-8499-24850fd6c32f",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 152.8,
+      "y": 0.8
+    },
+    "ActionMetadata": {
+      "f5815d17-ed88-44db-8231-30ee9be56ebd": {
+        "position": {
+          "x": 560,
+          "y": 260
+        }
+      },
+      "5670a3bf-6c1b-4426-8499-24850fd6c32f": {
+        "position": {
+          "x": 280,
+          "y": 0
+        },
+        "parameters": {
+          "Messages": [
+            {
+              "PromptId": {
+                "displayName": "CustomerQueue.wav"
+              }
+            }
+          ],
+          "InterruptFrequencySeconds": {
+            "unit": 1
+          }
+        },
+        "audio": [
+          {
+            "id": "arn:aws:connect:us-west-2:005061140551:instance/4ee502d7-43d5-48c9-b73b-0d9f553803b4/prompt/e0272017-7165-4777-b0dd-6799c2fac204",
+            "text": "CustomerQueue.wav",
+            "type": "Prompt"
+          }
+        ],
+        "timeoutUnit": {
+          "value": "sec"
+        }
+      },
+      "Callback Prompt": {
+        "position": {
+          "x": 280,
+          "y": 260
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "LexV2Bot": {
+            "AliasArn": {
+              "displayName": "Prod",
+              "useLexBotDropdown": true,
+              "lexV2BotName": "TechWithEaseSupportBot"
+            }
+          }
+        },
+        "useLexBotDropdown": true,
+        "lexV2BotName": "TechWithEaseSupportBot",
+        "lexV2BotAliasName": "Prod",
+        "conditionMetadata": []
+      },
+      "c964f0d9-0063-430d-9a8d-5c0631bd686e": {
+        "position": {
+          "x": 840,
+          "y": 260
+        },
+        "parameters": {
+          "LexV2Bot": {
+            "AliasArn": {
+              "displayName": "Prod",
+              "useLexBotDropdown": true,
+              "lexV2BotName": "TechWithEaseSupportBot"
+            }
+          }
+        },
+        "useLexBotDropdown": true,
+        "lexV2BotName": "TechWithEaseSupportBot",
+        "lexV2BotAliasName": "Prod",
+        "conditionMetadata": []
+      },
+      "6a99016b-3d5f-494a-8778-0212c235276a": {
+        "position": {
+          "x": 1400,
+          "y": 260
+        }
+      },
+      "01b03ca5-b0cf-4e09-aa58-92d9480209d0": {
+        "position": {
+          "x": 560,
+          "y": 0
+        },
+        "conditions": [],
+        "conditionMetadata": [
+          {
+            "id": "ccf1863c-f7f2-4c64-a6e7-223eb3358aa7",
+            "operator": {
+              "name": "Is greater than",
+              "value": "GreaterThan",
+              "shortDisplay": ">"
+            },
+            "value": "0"
+          }
+        ]
+      },
+      "12119f5d-8dd2-4810-b4b8-b4f13436173f": {
+        "position": {
+          "x": 1120,
+          "y": 260
+        }
+      },
+      "340cec37-3996-40a4-982f-feb05f6dd868": {
+        "position": {
+          "x": 1680,
+          "y": 260
+        }
+      },
+      "dc808a79-e040-4315-9641-45f19e93e25a": {
+        "position": {
+          "x": 840,
+          "y": 0
+        }
+      },
+      "316e6b8a-90b3-4c0e-ae96-37076d2b6d1c": {
+        "position": {
+          "x": 1960,
+          "y": 260
+        }
+      },
+      "67f111ca-badf-4280-aa72-00d853032102": {
+        "position": {
+          "x": 1400,
+          "y": 0
+        }
+      },
+      "6a6b0431-c84d-4ef5-a642-b544a5834539": {
+        "position": {
+          "x": 1681.6,
+          "y": 2.4
+        }
+      }
+    },
+    "Annotations": [],
+    "name": "TechWithEase_CallbackFlow",
+    "description": "",
+    "type": "customerQueue",
+    "status": "PUBLISHED",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {},
+      "Identifier": "f5815d17-ed88-44db-8231-30ee9be56ebd",
+      "Type": "EndFlowExecution",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "Messages": [
+          {
+            "PromptId": "arn:aws:connect:us-west-2:005061140551:instance/4ee502d7-43d5-48c9-b73b-0d9f553803b4/prompt/e0272017-7165-4777-b0dd-6799c2fac204"
+          }
+        ],
+        "InterruptFrequencySeconds": "30",
+        "ContinueMessagingDuringInterrupt": "false"
+      },
+      "Identifier": "5670a3bf-6c1b-4426-8499-24850fd6c32f",
+      "Type": "MessageParticipantIteratively",
+      "Transitions": {
+        "NextAction": "f5815d17-ed88-44db-8231-30ee9be56ebd",
+        "Conditions": [
+          {
+            "NextAction": "Callback Prompt",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "MessagesInterrupted"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "f5815d17-ed88-44db-8231-30ee9be56ebd",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "If you would like to receive a callback when an agent is available instead of waiting, press 1. You will not lose your place in line.",
+        "LexV2Bot": {
+          "AliasArn": "arn:aws:lex:us-west-2:005061140551:bot-alias/NLZCSJMM5Z/EXZP4YZZON"
+        }
+      },
+      "Identifier": "Callback Prompt",
+      "Type": "ConnectParticipantWithLexBot",
+      "Transitions": {
+        "NextAction": "f5815d17-ed88-44db-8231-30ee9be56ebd",
+        "Errors": [
+          {
+            "NextAction": "01b03ca5-b0cf-4e09-aa58-92d9480209d0",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "f5815d17-ed88-44db-8231-30ee9be56ebd",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "What phone number would you like to receive your callback on?",
+        "LexV2Bot": {
+          "AliasArn": "arn:aws:lex:us-west-2:005061140551:bot-alias/NLZCSJMM5Z/EXZP4YZZON"
+        }
+      },
+      "Identifier": "c964f0d9-0063-430d-9a8d-5c0631bd686e",
+      "Type": "ConnectParticipantWithLexBot",
+      "Transitions": {
+        "NextAction": "6a99016b-3d5f-494a-8778-0212c235276a",
+        "Errors": [
+          {
+            "NextAction": "12119f5d-8dd2-4810-b4b8-b4f13436173f",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "6a99016b-3d5f-494a-8778-0212c235276a",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "The number you have entered is not valid. Please try again."
+      },
+      "Identifier": "6a99016b-3d5f-494a-8778-0212c235276a",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "dc808a79-e040-4315-9641-45f19e93e25a",
+        "Errors": [
+          {
+            "NextAction": "340cec37-3996-40a4-982f-feb05f6dd868",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "ComparisonValue": "$.Attributes.CustomerPhone"
+      },
+      "Identifier": "01b03ca5-b0cf-4e09-aa58-92d9480209d0",
+      "Type": "Compare",
+      "Transitions": {
+        "NextAction": "c964f0d9-0063-430d-9a8d-5c0631bd686e",
+        "Conditions": [
+          {
+            "NextAction": "dc808a79-e040-4315-9641-45f19e93e25a",
+            "Condition": {
+              "Operator": "NumberGreaterThan",
+              "Operands": [
+                "0"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "c964f0d9-0063-430d-9a8d-5c0631bd686e",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "CallbackNumber": "$.Attributes.CustomerPhone"
+      },
+      "Identifier": "12119f5d-8dd2-4810-b4b8-b4f13436173f",
+      "Type": "UpdateContactCallbackNumber",
+      "Transitions": {
+        "NextAction": "67f111ca-badf-4280-aa72-00d853032102",
+        "Errors": [
+          {
+            "NextAction": "6a99016b-3d5f-494a-8778-0212c235276a",
+            "ErrorType": "InvalidCallbackNumber"
+          },
+          {
+            "NextAction": "6a99016b-3d5f-494a-8778-0212c235276a",
+            "ErrorType": "CallbackNumberNotDialable"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Something went wrong. Goodbye."
+      },
+      "Identifier": "340cec37-3996-40a4-982f-feb05f6dd868",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "316e6b8a-90b3-4c0e-ae96-37076d2b6d1c",
+        "Errors": [
+          {
+            "NextAction": "316e6b8a-90b3-4c0e-ae96-37076d2b6d1c",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "CallbackNumber": "$.Attributes.customerPhone"
+      },
+      "Identifier": "dc808a79-e040-4315-9641-45f19e93e25a",
+      "Type": "UpdateContactCallbackNumber",
+      "Transitions": {
+        "NextAction": "67f111ca-badf-4280-aa72-00d853032102",
+        "Errors": [
+          {
+            "NextAction": "c964f0d9-0063-430d-9a8d-5c0631bd686e",
+            "ErrorType": "InvalidCallbackNumber"
+          },
+          {
+            "NextAction": "c964f0d9-0063-430d-9a8d-5c0631bd686e",
+            "ErrorType": "CallbackNumberNotDialable"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "316e6b8a-90b3-4c0e-ae96-37076d2b6d1c",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "You will be called back at {CustomerPhone} when the next agent is available."
+      },
+      "Identifier": "67f111ca-badf-4280-aa72-00d853032102",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "6a6b0431-c84d-4ef5-a642-b544a5834539",
+        "Errors": [
+          {
+            "NextAction": "340cec37-3996-40a4-982f-feb05f6dd868",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "RetryDelaySeconds": "600",
+        "InitialCallDelaySeconds": "90",
+        "MaximumConnectionAttempts": "1",
+        "CallbackMode": "AgentFirst"
+      },
+      "Identifier": "6a6b0431-c84d-4ef5-a642-b544a5834539",
+      "Type": "CreateCallbackContact",
+      "Transitions": {
+        "NextAction": "316e6b8a-90b3-4c0e-ae96-37076d2b6d1c",
+        "Errors": [
+          {
+            "NextAction": "316e6b8a-90b3-4c0e-ae96-37076d2b6d1c",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ]
+}

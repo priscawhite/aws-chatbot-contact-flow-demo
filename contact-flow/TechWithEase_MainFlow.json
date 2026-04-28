@@ -1,0 +1,564 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "22c0cadb-cb11-401e-abe5-a13c60373c7b",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": -140,
+      "y": 0
+    },
+    "ActionMetadata": {
+      "Welcome": {
+        "position": {
+          "x": 280,
+          "y": 0
+        },
+        "isFriendlyName": true
+      },
+      "b082cc92-b1c4-4831-910a-4e1e0513c912": {
+        "position": {
+          "x": 1400,
+          "y": 0
+        },
+        "parameters": {
+          "QueueId": {
+            "displayName": "Billing Support"
+          }
+        },
+        "queue": {
+          "text": "Billing Support"
+        }
+      },
+      "22c0cadb-cb11-401e-abe5-a13c60373c7b": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "dynamicParams": []
+      },
+      "Check escalation": {
+        "position": {
+          "x": 840,
+          "y": 0
+        },
+        "isFriendlyName": true,
+        "conditions": [],
+        "conditionMetadata": [
+          {
+            "id": "9e24c4e8-6a9e-4eb2-bdce-296d31730d1c",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "true"
+          }
+        ]
+      },
+      "38eb91bf-9078-4a24-a411-b01154f735dc": {
+        "position": {
+          "x": 1400,
+          "y": 260
+        },
+        "parameters": {
+          "QueueId": {
+            "displayName": "Tech Support Tier 1"
+          }
+        },
+        "queue": {
+          "text": "Tech Support Tier 1"
+        }
+      },
+      "Billing": {
+        "position": {
+          "x": 1680,
+          "y": 0
+        },
+        "isFriendlyName": true
+      },
+      "Tech Support Tier 1": {
+        "position": {
+          "x": 1680,
+          "y": 260
+        },
+        "isFriendlyName": true
+      },
+      "e64b8fbe-830a-44e8-83ac-d5e4212e8e8c": {
+        "position": {
+          "x": 2240,
+          "y": 260
+        }
+      },
+      "599f417f-aa5a-4c4c-b49f-d46e8bdfa4b5": {
+        "position": {
+          "x": 840,
+          "y": 260
+        }
+      },
+      "46788c88-c7ca-4343-8a3b-44b3824882e6": {
+        "position": {
+          "x": 1120,
+          "y": 260
+        },
+        "parameters": {
+          "LexV2Bot": {
+            "AliasArn": {
+              "displayName": "Prod",
+              "useLexBotDropdown": true,
+              "lexV2BotName": "TechWithEaseSupportBot"
+            }
+          }
+        },
+        "useLexBotDropdown": true,
+        "lexV2BotName": "TechWithEaseSupportBot",
+        "lexV2BotAliasName": "Prod",
+        "conditionMetadata": []
+      },
+      "d16b39fd-b291-4a44-8655-16e0cda3968c": {
+        "position": {
+          "x": 1120,
+          "y": 0
+        },
+        "conditions": [],
+        "conditionMetadata": [
+          {
+            "id": "fe86322c-93bc-468c-9d72-6df05a1bb60e",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "billing"
+          },
+          {
+            "id": "c4f446b0-e1de-4925-b05f-0ca41db77580",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "ticketStatus"
+          }
+        ]
+      },
+      "44f39b46-a48c-4cb3-9332-fd5258f0b176": {
+        "position": {
+          "x": 560,
+          "y": 0
+        },
+        "parameters": {
+          "LexV2Bot": {
+            "AliasArn": {
+              "displayName": "Prod",
+              "useLexBotDropdown": true,
+              "lexV2BotName": "TechWithEaseSupportBot"
+            }
+          }
+        },
+        "useLexBotDropdown": true,
+        "lexV2BotName": "TechWithEaseSupportBot",
+        "lexV2BotAliasName": "Prod",
+        "conditionMetadata": []
+      },
+      "98b3e03f-17f2-464c-9c8b-653a8d79e599": {
+        "position": {
+          "x": 1120,
+          "y": 520
+        },
+        "conditions": [],
+        "conditionMetadata": [
+          {
+            "id": "42aa6918-d4c6-4ce1-8f84-495693962651",
+            "operator": {
+              "name": "Is greater or equal",
+              "value": "GreaterThanOrEqualTo",
+              "shortDisplay": ">="
+            },
+            "value": "2"
+          }
+        ]
+      },
+      "631606be-aa9f-4dcc-a0b9-f7e7a8f51c01": {
+        "position": {
+          "x": 1960,
+          "y": 260
+        },
+        "parameters": {
+          "EventHooks": {
+            "CustomerQueue": {
+              "displayName": "TechWithEase_CallbackFlow"
+            }
+          }
+        },
+        "contactFlow": {
+          "text": "TechWithEase_CallbackFlow",
+          "id": "arn:aws:connect:us-west-2:005061140551:instance/4ee502d7-43d5-48c9-b73b-0d9f553803b4/contact-flow/0d09c5a5-d435-4f35-82a0-9bb1ebd0700a"
+        },
+        "customerOrAgent": true
+      },
+      "a578b64b-d893-4f17-bb2b-c08d3975b449": {
+        "position": {
+          "x": 1400,
+          "y": 520
+        },
+        "parameters": {
+          "QueueId": {
+            "displayName": "Tech Support Tier 2"
+          }
+        },
+        "queue": {
+          "text": "Tech Support Tier 2"
+        }
+      },
+      "Tech Support Tier 2": {
+        "position": {
+          "x": 1680,
+          "y": 520
+        },
+        "isFriendlyName": true
+      }
+    },
+    "Annotations": [],
+    "name": "TechWithEase_MainFlow",
+    "description": "Main contact flow for Tech with Ease Support",
+    "type": "contactFlow",
+    "status": "PUBLISHED",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Thank you for contacting Tech With Ease Support. How can I help you today?"
+      },
+      "Identifier": "Welcome",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "44f39b46-a48c-4cb3-9332-fd5258f0b176",
+        "Errors": [
+          {
+            "NextAction": "44f39b46-a48c-4cb3-9332-fd5258f0b176",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "QueueId": "arn:aws:connect:us-west-2:005061140551:instance/4ee502d7-43d5-48c9-b73b-0d9f553803b4/queue/abf4f622-16d3-41be-895e-f8a19b81d50f"
+      },
+      "Identifier": "b082cc92-b1c4-4831-910a-4e1e0513c912",
+      "Type": "UpdateContactTargetQueue",
+      "Transitions": {
+        "NextAction": "Billing",
+        "Errors": [
+          {
+            "NextAction": "Billing",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "retryCount": "0",
+          "isEscalated": "false"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "22c0cadb-cb11-401e-abe5-a13c60373c7b",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "Welcome",
+        "Errors": [
+          {
+            "NextAction": "Welcome",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "ComparisonValue": "$.Attributes.$.Attributes.escalateToAgent"
+      },
+      "Identifier": "Check escalation",
+      "Type": "Compare",
+      "Transitions": {
+        "NextAction": "599f417f-aa5a-4c4c-b49f-d46e8bdfa4b5",
+        "Conditions": [
+          {
+            "NextAction": "d16b39fd-b291-4a44-8655-16e0cda3968c",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "true"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "599f417f-aa5a-4c4c-b49f-d46e8bdfa4b5",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "QueueId": "arn:aws:connect:us-west-2:005061140551:instance/4ee502d7-43d5-48c9-b73b-0d9f553803b4/queue/91e74eb7-d84f-4698-a604-a24cceebf1a7"
+      },
+      "Identifier": "38eb91bf-9078-4a24-a411-b01154f735dc",
+      "Type": "UpdateContactTargetQueue",
+      "Transitions": {
+        "NextAction": "Tech Support Tier 1",
+        "Errors": [
+          {
+            "NextAction": "Tech Support Tier 1",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "Billing",
+      "Type": "TransferContactToQueue",
+      "Transitions": {
+        "NextAction": "631606be-aa9f-4dcc-a0b9-f7e7a8f51c01",
+        "Errors": [
+          {
+            "NextAction": "631606be-aa9f-4dcc-a0b9-f7e7a8f51c01",
+            "ErrorType": "QueueAtCapacity"
+          },
+          {
+            "NextAction": "631606be-aa9f-4dcc-a0b9-f7e7a8f51c01",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "Tech Support Tier 1",
+      "Type": "TransferContactToQueue",
+      "Transitions": {
+        "NextAction": "631606be-aa9f-4dcc-a0b9-f7e7a8f51c01",
+        "Errors": [
+          {
+            "NextAction": "631606be-aa9f-4dcc-a0b9-f7e7a8f51c01",
+            "ErrorType": "QueueAtCapacity"
+          },
+          {
+            "NextAction": "631606be-aa9f-4dcc-a0b9-f7e7a8f51c01",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "e64b8fbe-830a-44e8-83ac-d5e4212e8e8c",
+      "Type": "EndFlowExecution",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "LoopCount": "2"
+      },
+      "Identifier": "599f417f-aa5a-4c4c-b49f-d46e8bdfa4b5",
+      "Type": "Loop",
+      "Transitions": {
+        "NextAction": "46788c88-c7ca-4343-8a3b-44b3824882e6",
+        "Conditions": [
+          {
+            "NextAction": "46788c88-c7ca-4343-8a3b-44b3824882e6",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "ContinueLooping"
+              ]
+            }
+          },
+          {
+            "NextAction": "46788c88-c7ca-4343-8a3b-44b3824882e6",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "DoneLooping"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "a578b64b-d893-4f17-bb2b-c08d3975b449",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "How can I help you today?",
+        "LexV2Bot": {
+          "AliasArn": "arn:aws:lex:us-west-2:005061140551:bot-alias/NLZCSJMM5Z/EXZP4YZZON"
+        }
+      },
+      "Identifier": "46788c88-c7ca-4343-8a3b-44b3824882e6",
+      "Type": "ConnectParticipantWithLexBot",
+      "Transitions": {
+        "NextAction": "a578b64b-d893-4f17-bb2b-c08d3975b449",
+        "Errors": [
+          {
+            "NextAction": "Check escalation",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "a578b64b-d893-4f17-bb2b-c08d3975b449",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "ComparisonValue": "$.Attributes.issueType"
+      },
+      "Identifier": "d16b39fd-b291-4a44-8655-16e0cda3968c",
+      "Type": "Compare",
+      "Transitions": {
+        "NextAction": "a578b64b-d893-4f17-bb2b-c08d3975b449",
+        "Conditions": [
+          {
+            "NextAction": "b082cc92-b1c4-4831-910a-4e1e0513c912",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "billing"
+              ]
+            }
+          },
+          {
+            "NextAction": "38eb91bf-9078-4a24-a411-b01154f735dc",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "ticketStatus"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "a578b64b-d893-4f17-bb2b-c08d3975b449",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Welcome to Tech with Ease Support. How can I help you today?",
+        "LexV2Bot": {
+          "AliasArn": "arn:aws:lex:us-west-2:005061140551:bot-alias/NLZCSJMM5Z/EXZP4YZZON"
+        }
+      },
+      "Identifier": "44f39b46-a48c-4cb3-9332-fd5258f0b176",
+      "Type": "ConnectParticipantWithLexBot",
+      "Transitions": {
+        "NextAction": "a578b64b-d893-4f17-bb2b-c08d3975b449",
+        "Errors": [
+          {
+            "NextAction": "Check escalation",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "a578b64b-d893-4f17-bb2b-c08d3975b449",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "ComparisonValue": "$.Attributes.retryCount"
+      },
+      "Identifier": "98b3e03f-17f2-464c-9c8b-653a8d79e599",
+      "Type": "Compare",
+      "Transitions": {
+        "NextAction": "44f39b46-a48c-4cb3-9332-fd5258f0b176",
+        "Conditions": [
+          {
+            "NextAction": "a578b64b-d893-4f17-bb2b-c08d3975b449",
+            "Condition": {
+              "Operator": "NumberGreaterOrEqualTo",
+              "Operands": [
+                "2"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "44f39b46-a48c-4cb3-9332-fd5258f0b176",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "EventHooks": {
+          "CustomerQueue": "arn:aws:connect:us-west-2:005061140551:instance/4ee502d7-43d5-48c9-b73b-0d9f553803b4/contact-flow/0d09c5a5-d435-4f35-82a0-9bb1ebd0700a"
+        }
+      },
+      "Identifier": "631606be-aa9f-4dcc-a0b9-f7e7a8f51c01",
+      "Type": "UpdateContactEventHooks",
+      "Transitions": {
+        "NextAction": "e64b8fbe-830a-44e8-83ac-d5e4212e8e8c",
+        "Errors": [
+          {
+            "NextAction": "e64b8fbe-830a-44e8-83ac-d5e4212e8e8c",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "QueueId": "arn:aws:connect:us-west-2:005061140551:instance/4ee502d7-43d5-48c9-b73b-0d9f553803b4/queue/c566414b-10e9-4a9f-9d77-2404a1d2dbf0"
+      },
+      "Identifier": "a578b64b-d893-4f17-bb2b-c08d3975b449",
+      "Type": "UpdateContactTargetQueue",
+      "Transitions": {
+        "NextAction": "Tech Support Tier 2",
+        "Errors": [
+          {
+            "NextAction": "Tech Support Tier 2",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "Tech Support Tier 2",
+      "Type": "TransferContactToQueue",
+      "Transitions": {
+        "NextAction": "631606be-aa9f-4dcc-a0b9-f7e7a8f51c01",
+        "Errors": [
+          {
+            "NextAction": "631606be-aa9f-4dcc-a0b9-f7e7a8f51c01",
+            "ErrorType": "QueueAtCapacity"
+          },
+          {
+            "NextAction": "631606be-aa9f-4dcc-a0b9-f7e7a8f51c01",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ]
+}
