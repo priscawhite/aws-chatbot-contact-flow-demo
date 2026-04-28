@@ -1,0 +1,9 @@
+[
+  {
+    "phoneNumber": "4045551234",
+    "firstName": "John",
+    "emailAddress": "john@email.com",
+    "lastTicketID": "TCK-1234",
+    "ticketStatus": "In Progress"
+  }
+]
