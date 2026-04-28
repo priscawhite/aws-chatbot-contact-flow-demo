@@ -27,7 +27,7 @@ The Amazon Connect contact flow is designed to provide a streamlined, guided cus
  ## **Website & Serverless Chatbot**
  The web application is built as a lightweight, responsive frontend using HTML, CSS, and minimal JavaScript, with a focus on clean layout, usability, and fast performance. The chatbot interface is embedded via an iframe and styled to integrate seamlessly into the overall page design, with careful control over sizing, positioning, and responsiveness across devices. Static assets are hosted and delivered through Amazon S3 and Amazon CloudFront, enabling low-latency content delivery, caching, and improved global performance.
 
-![Homepage_screenshot](/img/TechWithEase_Home.png)
+![Homepage_screenshot](/img/TechWithEase_chat_demo.gif)
 
 ## **Architecture**
 This solution uses multiple AWS services integrated with Amazon Connect.
