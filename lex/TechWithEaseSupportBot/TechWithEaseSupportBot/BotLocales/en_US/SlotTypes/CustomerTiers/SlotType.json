@@ -1,0 +1,1 @@
+{"name":"CustomerTiers","identifier":"NHECYI7IQD","description":null,"slotTypeValues":[{"synonyms":null,"sampleValue":{"value":"Standard"}},{"synonyms":null,"sampleValue":{"value":"Premium"}}],"parentSlotTypeSignature":null,"valueSelectionSetting":{"resolutionStrategy":"ORIGINAL_VALUE","advancedRecognitionSetting":null,"regexFilter":null}}
