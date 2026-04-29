@@ -34,20 +34,20 @@ Make sure your AWS CLI is configured:
 `aws configure`
 
 or use environment variables:
-
-`export AWS_ACCESS_KEY_ID=your_access_key`  
-`export AWS_SECRET_ACCESS_KEY=your_secret_key`  
-`export AWS_DEFAULT_REGION=us-east-1`
-
+```
+export AWS_ACCESS_KEY_ID=your_access_key
+export AWS_SECRET_ACCESS_KEY=your_secret_key
+export AWS_DEFAULT_REGION=us-east-1
+```
 ---
 
 ### 4. Set Required Environment variables
-
-`export LEX_BOT_ID=your_lex_bot_id`  
-`export LEX_BOT_ALIAS_ID=your_lex_alias_id`  
-`export LAMBDA_FUNCTION_NAME=your_lambda_function_name`  
-`export CLOUDWATCH_LOG_GROUP=/aws/lambda/your-lambda-function-name`
-
+```
+export LEX_BOT_ID=your_lex_bot_id
+export LEX_BOT_ALIAS_ID=your_lex_alias_id
+export LAMBDA_FUNCTION_NAME=your_lambda_function_name
+export CLOUDWATCH_LOG_GROUP=/aws/lambda/your-lambda-function-name
+```
 ---
 
 ## Running All Tests
@@ -84,17 +84,18 @@ From the root directory:
 `pytest -v`
 
 ## Example Test Run Output
-
-`============================= test session starts =============================`  
-`collected 10 items`
+```
+============================= test session starts ============================= 
+collected 10 items
   
-`test_lex_flows.py ......`  
-`test_lambda_flows.py ..`  
-`test_fallback_and_handoff.py ..`  
-`test_cloudwatch_logs.py ..`  
-`test_performance.py .`  
+test_lex_flows.py ......
+test_lambda_flows.py ..
+test_fallback_and_handoff.py .. 
+test_cloudwatch_logs.py ..
+test_performance.py .
 
-`============================== 10 passed in 5.12s ==============================`
+============================== 10 passed in 5.12s ==============================
+```
 
 ## Success Criteria
 All tests should pass with:
