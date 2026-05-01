@@ -60,6 +60,20 @@ This solution uses multiple AWS services integrated with Amazon Connect.
 ## **Testing Strategy**
 This project includes structured test scenarios and sample event payloads to simulate real-world interactions with the Lex bot and Lambda backend.
 
+## **Repository Structure**
+```
+📂 main/
+│── README.md
+│── 📂 contact-flow/
+│── 📂 dynamodb/
+│── 📂 lex/
+└── 📂 tests/
+```
+**contact-flow** Defines Amazon Connect contact flow architecture, including call routing logic and end-to-end customer interaction design   
+**dynamodb** Specifies DynamoDB schema design, configuration, and data access patterns supporting scalable session management  
+**lex** Details Amazon Lex chatbot architecture, including intent modeling, slot management, and backend integrations  
+**tests** Documents automated testing framework, covering end-to-end validation, scenario coverage, and system reliability checks
+
 ## **Future Updates**
 Tech with Ease will continue to evolve to meet the needs of their customers! Check back later for new features!
 | Feature 🌟 Wishlist |
