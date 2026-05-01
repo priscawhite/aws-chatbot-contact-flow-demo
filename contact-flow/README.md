@@ -22,7 +22,9 @@ Utilizes the `TechWithEaseSupportBot` (Amazon Lex V2) to greet the customer and 
 **Event Hook Integration**  
 Registers the `TechWithEase_CallbackFlow` as an event hook, enabling callback capabilities while the customer is in the queue.
 
-![MainFlow](/contact-flow/TechWithEase_MainFlow.png)
+![MainFlow](/img/TechWithEase_MainFlow1.png)
+![MainFlow](/img/TechWithEase_MainFlow2.png)
+
 
 ---
 
@@ -47,4 +49,4 @@ Engages the Lex V2 Bot to confirm if the user prefers a callback.
 **Closure**  
 Confirms the callback request to the customer and disconnects the caller.
 
-![CallbackFlow](/contact-flow/TechWithEase_CallbackFlow.png)
+![CallbackFlow](/img/TechWithEase_CallbackFlow.png)
