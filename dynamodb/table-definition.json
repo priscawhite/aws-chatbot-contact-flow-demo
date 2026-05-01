@@ -1,0 +1,38 @@
+{
+    "Table": {
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "phoneNumber",
+                "AttributeType": "S"
+            }
+        ],
+        "TableName": "TechWithEaseCustomers",
+        "KeySchema": [
+            {
+                "AttributeName": "phoneNumber",
+                "KeyType": "HASH"
+            }
+        ],
+        "TableStatus": "ACTIVE",
+        "CreationDateTime": "2026-04-22T11:31:19.835000-04:00",
+        "ProvisionedThroughput": {
+            "NumberOfDecreasesToday": 0,
+            "ReadCapacityUnits": 0,
+            "WriteCapacityUnits": 0
+        },
+        "TableSizeBytes": 4116,
+        "ItemCount": 21,
+        "TableArn": "arn:aws:dynamodb:us-west-2:XXXXXXXXXXXX:table/TechWithEaseCustomers",
+        "TableId": "abb166aa-1d7b-45e9-a64b-412bf512dc96"
+        },
+        "TableClassSummary": {
+            "TableClass": "STANDARD"
+        },
+        "DeletionProtectionEnabled": false,
+        "WarmThroughput": {
+            "ReadUnitsPerSecond": 12000,
+            "WriteUnitsPerSecond": 4000,
+            "Status": "ACTIVE"
+        }
+    }
+}
