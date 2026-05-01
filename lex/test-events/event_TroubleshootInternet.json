@@ -1,0 +1,36 @@
+{
+  "sessionState": {
+    "intent": {
+      "name": "TroubleshootInternet",
+      "state": "ReadyForFulfillment",
+      "slots": {
+        "CustomerName": {
+          "value": {
+            "originalValue": "John Smith",
+            "interpretedValue": "John Smith"
+          }
+        },
+        "CustomerPhone": {
+          "value": {
+            "originalValue": "(404) 555-1234",
+            "interpretedValue": "4045551234"
+          }
+        },
+        "CustomerEmail": {
+          "value": {
+            "originalValue": "john@email.com",
+            "interpretedValue": "john@email.com"
+          }
+        },
+        "IssueDescription": {
+          "value": {
+            "originalValue": "My internet has been down since this morning",
+            "interpretedValue": "My internet has been down since this morning"
+          }
+        }
+      }
+    },
+    "sessionAttributes": {}
+  },
+  "inputTranscript": "My internet is down"
+}

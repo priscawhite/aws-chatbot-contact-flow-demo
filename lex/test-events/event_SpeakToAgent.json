@@ -1,0 +1,18 @@
+{
+  "sessionState": {
+    "intent": {
+      "name": "BillingHelp",
+      "state": "ReadyForFulfillment",
+      "slots": {
+        "CustomerPhone": {
+          "value": {
+            "originalValue": "(404) 555-1234",
+            "interpretedValue": "4045551234"
+          }
+        }
+      }
+    },
+    "sessionAttributes": {}
+  },
+  "inputTranscript": "I want to speak to a billing agent"
+}

@@ -1,0 +1,19 @@
+{
+  "sessionId": "test-session-001",
+  "inputTranscript": "Check my ticket status",
+  "sessionState": {
+    "intent": {
+      "name": "CheckTicketStatus",
+      "state": "ReadyForFulfillment",
+      "slots": {
+        "CustomerPhone": {
+          "value": {
+            "originalValue": "212-555-0019",
+            "interpretedValue": "212-555-0019",
+            "resolvedValues": ["212-555-0019"]
+          }
+        }
+      }
+    }
+  }
+}
